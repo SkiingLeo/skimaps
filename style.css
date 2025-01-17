@@ -1,0 +1,84 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inputs {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 5px;
+    width: 120px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+#plotImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#plotPoint {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    border: 1.5px solid white;
+    box-shadow: 0 0 4px rgba(0,0,0,0.8);
+    display: none;
+}
+
+#locationButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#coordInput {
+    width: 200px;
+}
+
+#coordDisplay {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    white-space: pre-line;
+    min-height: 20px;
+}

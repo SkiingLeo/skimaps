@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinate Plotter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Coordinate Plotter</h1>
+    <div class="container">
+        <div class="inputs">
+            <button id="locationButton">Use My Location</button>
+            <input type="text" id="coordInput" placeholder="47.155072, 9.312488">
+            <button id="plotButton">Plot Coordinates</button>
+            <div id="coordDisplay"></div>
+        </div>
+        <div class="image-container" style="display: none;">
+            <img id="plotImage" alt="Plot area" 
+                 onerror="console.error('Failed to load image')"
+                 onload="console.log('Image loaded successfully')">
+            <div id="plotPoint"></div>
+        </div>
+    </div>
+    <script src="common/geofencing.js"></script>
+    <script src="common/script.js"></script>
+    <script>
+        // Register service worker for offline functionality
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(registration => {
+                    console.log('ServiceWorker registration successful');
+                })
+                .catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davos - Coordinate Plotter</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Davos Coordinate Plotter</h1>
+    <div class="container">
+        <div class="inputs">
+            <button id="locationButton">Use My Location</button>
+            <input type="text" id="coordInput" placeholder="46.803525, 9.712178">
+            <button id="plotButton">Plot Coordinates</button>
+            <div id="coordDisplay"></div>
+        </div>
+        <div class="image-container">
+            <img id="plotImage" src="davos_map_slim.jpg" alt="Davos map" 
+                 onerror="console.error('Failed to load image')"
+                 onload="console.log('Image loaded successfully')">
+            <div id="plotPoint"></div>
+        </div>
+    </div>
+    <script src="../common/geofencing.js"></script>
+    <script src="points.js"></script>
+    <script src="../common/script.js"></script>
+</body>
+</html>
