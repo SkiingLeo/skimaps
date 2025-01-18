@@ -5,9 +5,9 @@ let geofencingManager = new GeofencingManager();
 // Get the current location from the URL path properly
 const getCurrentLocation = () => {
     const pathSegments = window.location.pathname.split('/');
-    // Look for either 'davos' or 'chaeserrugg' in the path
+    // Look for either 'davos', 'chaeserrugg', or 'stmoritz' in the path
     const locationName = pathSegments.find(segment => 
-        ['davos', 'chaeserrugg'].includes(segment.toLowerCase())
+        ['davos', 'chaeserrugg', 'stmoritz'].includes(segment.toLowerCase())
     ) || 'index';
     
     console.log('Detected location:', locationName);

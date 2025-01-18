@@ -19,6 +19,15 @@ class GeofencingManager {
                     maxLon: 9.330963
                 },
                 image_name: "map_chaeserrugg.jpg"
+            },
+            "stmoritz": {
+                bounds: {
+                    minLat: 46.473848,
+                    maxLat: 46.543986,
+                    minLon: 9.773144,
+                    maxLon: 9.853069
+                },
+                image_name: "st_moritz_map.jpg"
             }
         };
     }
